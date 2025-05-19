@@ -18,6 +18,5 @@ int main(){
     float vari =89.67;
     float &x =vari;
     cout<<int(x);
-
     return 0;
 }
