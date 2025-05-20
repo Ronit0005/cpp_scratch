@@ -11,11 +11,12 @@ int main(){
     // }
 
     // contiue statement:
-    for(int i=0;i<=10;i++){
-        if(i==0){
-            continue;
-        }
-        cout<<i<<endl;
-    }
+    // for(int i=0;i<=10;i++){
+    //     if(i==0){
+    //         continue;
+    //     }
+    //     cout<<i<<endl;
+    // }
+    
     return 0;
 }
