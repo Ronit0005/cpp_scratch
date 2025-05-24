@@ -33,3 +33,12 @@ int main()
     sum.getData();
     return 0;
 }
+
+// Properties of friend function :-
+/*
+1. Not in the scope of the class .
+2. since it is not in scope of the class it cannot be called through any object .
+3. Can be invoked without any objects .
+4. Generally takes object as a argument .
+5. Can be declared inside public and private section in the class .
+*/
