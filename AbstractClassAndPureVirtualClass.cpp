@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
-#include <cstring>
+// Pure Virtual Function : Is a function made to be redefined in the derived class .
+// Class containing : One or more abstarct class , they are classes be assisted .
+// We cannot made a object of abstract class .
 class Code_With_Harry{
     protected:
         string title;
@@ -10,9 +12,7 @@ class Code_With_Harry{
             rating = r;
             title=s;
         }
-         void display(){
-            cout<<"Bogus Code "<<endl;
-        }
+        virtual void display()=0;
 };
 class Video:public Code_With_Harry{
     int videoLength;
@@ -38,29 +38,9 @@ class Video:public Code_With_Harry{
         }
 };
 int main(){
-    string title="Django tutorial";
-    float rating , vlen;
-    int words ;
-    vlen=10.01;
-    words=9753;
-    rating= 5;
-    Video djangovideo(title,rating,vlen);
-    // djangovideo.display();
-    Text djangotext(title,rating,words);
-    // djangotext.display();
-    Code_With_Harry* tut[2];
-    tut[0]=&djangotext;
-    tut[1]=&djangovideo;
-    tut[1]->display();
-    tut[0]->display();
+    Code_With_Harry* ptr ;
+    Video obj("Ronit",5,10.03);
+    ptr = &obj;
+    ptr->display();
     return 0;
 }
-
-// Rules for virtual function:- 
-/*
-1. They cannot be static .
-2. They can be accesed by object pointer .
-3. Virtual function can be friend of another class .
-4. A virtual function in the base class might not be used .
-5. If a virtual function is defined in the base class , it not nescesity to define it in the derived class( if not found , the function in the base class is executed without any error ).
-*/
